@@ -14,5 +14,28 @@ class TestBooking {
 		String result = demo.getBookingId();
 		assertEquals(expBookingID, result);
 	}
-
+	
+	@Test
+	public void testBookedExercise() {
+		String expExercise = "basketball";
+		String result = demo.getLessonName();
+		assertEquals(expExercise, result);
+	}
+	
+	@Test
+	public void testBookedDate() {
+		String expDate = "01-01-2022";
+		String result = demo.getLessonDate();
+		assertEquals(expDate, result);
+	}
+	
+	@Test
+	public void testBookingStatus() {
+		String expStatus = "attended";
+		String result = demo.getBookingStatus();
+		assertEquals(expStatus, result);
+	}
 }
+	
+	
+

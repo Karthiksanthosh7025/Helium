@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-public class TestDemo01 {
+public class TestExercise {
 	Exercise demo = new Exercise("Yoga","morning","01-01-2022",1,5);
 	
 	@Test
@@ -13,14 +13,6 @@ public class TestDemo01 {
 		String result = demo.getLessonName();
 		assertEquals(expLesson, result);
 	}
-	
-//	@Test
-//	public void test02() {
-//		Booking demo = new Booking("hert6753","basketball","01-01-2022","attended",3);
-//		String expBookingID = "hert6753";
-//		String result = demo.getBookingId();
-//		assertEquals(expBookingID, result);
-//	}
 	
 	@Test
 	public void testLessonSession() {
