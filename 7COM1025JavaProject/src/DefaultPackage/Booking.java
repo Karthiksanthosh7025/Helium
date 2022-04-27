@@ -62,13 +62,13 @@ public class Booking {
         this.rating = rating;
     }
     //REMOVED int cap FROM BELOW PARAMETERIZED CONSTRUCTOR
-    Booking(String id, String lessonName, String date, String status, int cap){
+    Booking(String id, String lessonName, String date, String status, String rev, int ratings){
         this.bookingId = id;
         this.lessonName = lessonName;
         this.lessonDate = date;
         this.bookingStatus = status;
-        this.review = null;
-        this.rating = 0;
+        this.review = rev;
+        this.rating = ratings;
 //        this.capacity = cap;
     }
 

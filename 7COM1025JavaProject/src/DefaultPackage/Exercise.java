@@ -87,12 +87,12 @@ public class Exercise {
     public void bookConfirmTest01(String userLesson, String userDate, String userBookingId){
         if(userBookingId == null){
             if(lessonName.equals(userLesson) && date.equals(userDate) && capacity > 0){
-                int rand = ThreadLocalRandom.current().nextInt(55555,99999);
-                String bookingId = "hert" + rand;
+                int rand = ThreadLocalRandom.current().nextInt(11111,99999);
+                String bookingId = "LM" + rand;
                 String bookingStatus = "booked";
                 this.capacity--;
 
-                bookings.add(new Booking(bookingId,lessonName,date,bookingStatus,capacity));
+                bookings.add(new Booking(bookingId,lessonName,date,bookingStatus,bookingStatus, capacity));
 
                 System.out.println("Booking Success with Booking ID:" + bookingId);
 

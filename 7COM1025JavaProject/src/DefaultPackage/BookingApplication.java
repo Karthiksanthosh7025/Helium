@@ -16,17 +16,17 @@ public class BookingApplication {
         exercises.add(new Exercise("yoga","Morning","01-01-2022",4,5));
         exercises.add(new Exercise("swimming","Afternoon","01-01-2022",4,2));
         exercises.add(new Exercise("football","Evening","01-01-2022",4,6));
-        exercises.add(new Exercise("cricket","Morning","02-01-2022",4,8));
-        exercises.add(new Exercise("boxing","afternoon","02-01-2022",4,10));
+        exercises.add(new Exercise("cricket","Morning","02-01-2022",3,8));
+        exercises.add(new Exercise("boxing","afternoon","02-01-2022",3,10));
         exercises.add(new Exercise("basketball","Evening","02-01-2022",4,6));
         exercises.add(new Exercise("yoga","Morning","08-01-2022",4,5));
         exercises.add(new Exercise("swimming","Afternoon","08-01-2022",4,2));
-        exercises.add(new Exercise("football","Evening","08-01-2022",4,6));
+        exercises.add(new Exercise("football","Evening","08-01-2022",3,6));
         exercises.add(new Exercise("cricket","Morning","09-01-2022",4,8));
-        exercises.add(new Exercise("boxing","afternoon","09-01-2022",4,10));
-        exercises.add(new Exercise("basketball","Evening","09-01-2022",4,6));
+        exercises.add(new Exercise("boxing","afternoon","09-01-2022",3,10));
+        exercises.add(new Exercise("basketball","Evening","09-01-2022",3,6));
         exercises.add(new Exercise("yoga","Morning","15-01-2022",4,5));
-        exercises.add(new Exercise("swimming","Afternoon","15-01-2022",4,2));
+        exercises.add(new Exercise("swimming","Afternoon","15-01-2022",3,2));
         exercises.add(new Exercise("football","Evening","15-01-2022",4,6));
         exercises.add(new Exercise("cricket","Morning","16-01-2022",4,8));
         exercises.add(new Exercise("boxing","afternoon","16-01-2022",4,10));
@@ -43,18 +43,18 @@ public class BookingApplication {
         exercises.add(new Exercise("cricket","Morning","30-01-2022",4,8));
         exercises.add(new Exercise("boxing","afternoon","30-01-2022",4,10));
         exercises.add(new Exercise("basketball","Evening","30-01-2022",4,6));
-        exercises.add(new Exercise("yoga","Morning","05-02-2022",4,5));
+        exercises.add(new Exercise("yoga","Morning","05-02-2022",3,5));
         exercises.add(new Exercise("swimming","Afternoon","05-02-2022",4,2));
         exercises.add(new Exercise("football","Evening","05-02-2022",4,6));
-        exercises.add(new Exercise("cricket","Morning","06-02-2022",4,8));
+        exercises.add(new Exercise("cricket","Morning","06-02-2022",3,8));
         exercises.add(new Exercise("boxing","afternoon","06-02-2022",4,10));
         exercises.add(new Exercise("basketball","Evening","06-02-2022",4,6));
         exercises.add(new Exercise("yoga","Morning","12-02-2022",4,5));
         exercises.add(new Exercise("swimming","Afternoon","12-02-2022",4,2));
         exercises.add(new Exercise("football","Evening","12-02-2022",4,6));
         exercises.add(new Exercise("cricket","Morning","13-02-2022",4,8));
-        exercises.add(new Exercise("boxing","afternoon","13-02-2022",4,10));
-        exercises.add(new Exercise("basketball","Evening","13-02-2022",4,6));
+        exercises.add(new Exercise("boxing","afternoon","13-02-2022",3,10));
+        exercises.add(new Exercise("basketball","Evening","13-02-2022",3,6));
         exercises.add(new Exercise("yoga","Morning","19-02-2022",4,5));
         exercises.add(new Exercise("swimming","Afternoon","19-02-2022",4,2));
         exercises.add(new Exercise("football","Evening","19-02-2022",4,6));
@@ -62,21 +62,16 @@ public class BookingApplication {
         exercises.add(new Exercise("boxing","afternoon","19-02-2022",4,10));
         exercises.add(new Exercise("basketball","Evening","19-02-2022",4,6));
         
-        bookings.add(new Booking("hert69104","boxing","02-01-2022","attended",2));
-    	bookings.add(new Booking("hert69105","cricket","01-01-2022","attended",2));
-    	bookings.add(new Booking("hert69106","football","08-01-2022","attended",2));
-    	bookings.add(new Booking("hert69107","basketball","08-01-2022","attended",2));
-    	bookings.add(new Booking("hert69104","boxing","09-01-2022","attended",2));
-    	bookings.add(new Booking("hert69104","swimming","15-01-2022","attended",2));
-    	bookings.add(new Booking("hert69104","yoga","05-02-2022","attended",2));
-    	bookings.add(new Booking("hert69104","cricket","06-02-2022","attended",2));
-    	bookings.add(new Booking("hert69104","boxing","12-02-2022","attended",2));
-    	bookings.add(new Booking("hert69104","basketball","13-02-2022","attended",2));
-
-        reports.add(new Report("yoga",0,0,0));
-        reports.add(new Report("zumba",0,0,0));
-        reports.add(new Report("swimming",0,0,0));
-        reports.add(new Report("boxing",0,0,0));
+        bookings.add(new Booking("LM69104","boxing","02-01-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69105","cricket","02-01-2022","attended","Satisfied",4));
+    	bookings.add(new Booking("LMt69106","football","08-01-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69107","basketball","09-01-2022","attended","Ok",3));
+    	bookings.add(new Booking("LM69108","boxing","09-01-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69109","swimming","15-01-2022","attended","Dissatisfied",2));
+    	bookings.add(new Booking("LM69110","yoga","05-02-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69112","cricket","06-02-2022","attended","Satisfied",4));
+    	bookings.add(new Booking("LM69113","boxing","13-02-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69114","basketball","13-02-2022","attended","Ok",3));
 
 
         System.out.println(exercises);
@@ -88,7 +83,7 @@ public class BookingApplication {
 		/*for(Exercise e:exercises) {
 			e.displayExcersizeDetails();
 		}*/
-
+        
        while(true){
            System.out.println("!!!!! Welcome to University Sports Center !!!!! " +
                    "\nEnter '1' for Booking \nEnter '2' for Change Booking " +
@@ -98,14 +93,16 @@ public class BookingApplication {
                for(Booking b:bookings){
                     b.bookingDetails();
                }
+               int loop1=1;
+               do {
                System.out.println("Enter '1' for view by Date \nEnter '2' for view by Lesson");
-               userInput = scanner.nextInt();
+               userInput = scanner.nextInt(); 
                if(userInput == 1) {
                    System.out.println("|| BY DATE || \nClasses are scheduled on 'January: 1, 2, 8, 9, 25, 26' || 'February: 1, 2, 8, 9, 25, 26' || 'March: 5, 6, 12, 13'");
                    String userInputDate;
                    System.out.println("Enter a date from above in dd-mm-yyyy");
                    userInputDate = scanner.next();
-                   for(Exercise e:exercises) {
+                  for(Exercise e:exercises) {
                        e.displayDetailsByDate(userInputDate);
                    }
                    System.out.println("Please choose a lesson");
@@ -114,7 +111,9 @@ public class BookingApplication {
 
                    for(Exercise booking:exercises) {
                        booking.bookConfirmTest01(userConfirmedLesson, userInputDate, null);
-                   }}
+                   }
+                   loop1--;
+                   }
 
                else if(userInput == 2) {
                    System.out.println("BY LESSON");
@@ -130,7 +129,13 @@ public class BookingApplication {
                    for(Exercise booking:exercises) {
                        booking.bookConfirmTest01(userInputLesson, userConfirmedDate,null);
                    }
+                   loop1--;
                }
+               else {
+            	   System.out.println("Please enter a valid option");
+               }
+               }
+               while(loop1==1);
 
            }
            else if (userOption == 2)
@@ -257,8 +262,7 @@ public class BookingApplication {
 
                       for(Report re:reports){
                           if(re.getLessonName().equals(b.getLessonName())){
-                              noOfBookings = bookings.stream().filter(booking -> booking.getLessonName().equals(re.getLessonName())).count();
-                              //System.out.println(re.getLessonName() + noOfBookings);
+                              noOfBookings = bookings.stream().filter(booking -> booking.getLessonName().equals(re.getLessonName())).count();                     
                               re.setNoOfBookings(noOfBookings);
                           }
                       }

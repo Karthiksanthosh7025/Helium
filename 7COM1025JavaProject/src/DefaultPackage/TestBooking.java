@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class TestBooking {
 	
-	Booking demo = new Booking("hert6753","basketball","01-01-2022","attended",3);
+	Booking demo = new Booking("hert6753","basketball","01-01-2022","attended","Ok",3);
 
 	@Test
 	public void testBookingId() {
@@ -34,6 +34,20 @@ class TestBooking {
 		String expStatus = "attended";
 		String result = demo.getBookingStatus();
 		assertEquals(expStatus, result);
+	}
+	
+	@Test
+	public void testLessonReview() {
+		String expRev = "Ok";
+		String result = demo.getReview();
+		assertEquals(expRev, result);
+	}
+	
+	@Test
+	public void testLessonRating() {
+		int expRev = 3;
+		int result = demo.getRating();
+		assertEquals(expRev, result);
 	}
 }
 	
