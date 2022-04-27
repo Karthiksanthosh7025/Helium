@@ -8,7 +8,6 @@ public class BookingApplication {
 
     static ArrayList<Booking> bookings = new ArrayList<>();
     static  ArrayList<Exercise> exercises = new ArrayList<>();
-    static ArrayList<Report> reports = new ArrayList<Report>();
     
     public static void main(String[] args) {
     	
@@ -99,14 +98,14 @@ public class BookingApplication {
                    System.out.println("Enter a date from above in dd-mm-yyyy");
                    userInputDate = scanner.next();
                   for(Exercise e:exercises) {
-                       e.displayDetailsByDate(userInputDate);
+                       e.displayClassDetailsByDate(userInputDate);
                    }
                    System.out.println("Please choose a lesson");
                    String userConfirmedLesson = scanner.next();
 
 
                    for(Exercise booking:exercises) {
-                       booking.bookConfirmTest01(userConfirmedLesson, userInputDate, null);
+                       booking.confirmBooking(userConfirmedLesson, userInputDate, null);
                    }
                    loop1--;
                    }
@@ -123,7 +122,7 @@ public class BookingApplication {
                    String userConfirmedDate = scanner.next();
 
                    for(Exercise booking:exercises) {
-                       booking.bookConfirmTest01(userInputLesson, userConfirmedDate,null);
+                       booking.confirmBooking(userInputLesson, userConfirmedDate,null);
                    }
                    loop1--;
                }
@@ -155,14 +154,14 @@ public class BookingApplication {
                            if(confirmation.equals("y")){
                                System.out.println("Available Classes are:\n");
                                for (Exercise e : exercises){
-                                   e.classDetails();
+                                   e.detailsOfClass();
                                }
                                System.out.println("Enter a date from above in dd-mm-yyyy");
                                String changeDate = scanner.next();
                                System.out.println("Enter the class Name");
                                String changeClass = scanner.next();
                                for (Exercise e : exercises){
-                                   e.bookConfirmTest01(changeClass,changeDate,userBookingId);
+                                   e.confirmBooking(changeClass,changeDate,userBookingId);
                                    //  e.setCapacity(lessonName,lessonDate,capacity);
                                }
 
@@ -182,7 +181,7 @@ public class BookingApplication {
                }
                else if(choice == 2){
                    for (Exercise e : exercises) {
-                       e.classDetails();
+                       e.detailsOfClass();
                    }
                    System.out.println("Please Enter your Booking ID: ");
                    String userBookingId = scanner.next();
@@ -227,7 +226,7 @@ public class BookingApplication {
                        System.out.println("Are you sure you want to attend the Class (y/n):");
                        String confirmation = scanner.next();
                        if (confirmation.equals("y")) {
-                           b.attendLesson(userBookingId);
+                           b.attendASession(userBookingId);
                            System.out.println("Please write a review for the class\n");
                            String userReview = scanner.next();
                            b.setReview(userReview);
@@ -241,30 +240,7 @@ public class BookingApplication {
 
                }
            }
-           else if(userOption == 4){
-               for(Booking b:bookings){
-                   b.bookingDetails();
-               }
-                System.out.println("Enter the month for report [MM]");
-                String userDate = scanner.next();
-               for(Booking b:bookings){
-                  if((b.getLessonDate().substring(3,5)).equals(userDate)){
-                      int rating = 0;
-                      long noOfBookings =0;
-                      int income = 0;
-
-                      for(Report re:reports){
-                          if(re.getLessonName().equals(b.getLessonName())){
-                              noOfBookings = bookings.stream().filter(booking -> booking.getLessonName().equals(re.getLessonName())).count();                     
-                              re.setNoOfBookings(noOfBookings);
-                          }
-                      }
-                  }
-               }
-
-
-           }
-           
+                      
            else {
                System.out.println("Please enter a valid option");
            }

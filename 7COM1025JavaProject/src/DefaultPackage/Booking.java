@@ -5,25 +5,24 @@ import static DefaultPackage.BookingApplication.bookings;
 import static DefaultPackage.BookingApplication.exercises;
 
 public class Booking {
-	private String bookingId;
-    private String lessonName;
-    private String lessonDate;
+	private String hertsBookingId;
+    private String exerciseLessonName;
+    private String exerciseLessonDate;
     private String bookingStatus;
     private String review;
     private int rating;
-   // private int capacity;
 
 
     public String getBookingId() {
-        return bookingId;
+        return hertsBookingId;
     }
 
     public String getLessonName() {
-        return lessonName;
+        return exerciseLessonName;
     }
 
     public String getLessonDate() {
-        return lessonDate;
+        return exerciseLessonDate;
     }
 
     public String getBookingStatus() {
@@ -31,15 +30,15 @@ public class Booking {
     }
 
     public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
+        this.hertsBookingId = bookingId;
     }
 
     public void setLessonName(String lessonName) {
-        this.lessonName = lessonName;
+        this.exerciseLessonName = lessonName;
     }
 
     public void setLessonDate(String lessonDate) {
-        this.lessonDate = lessonDate;
+        this.exerciseLessonDate = lessonDate;
     }
 
     public void setBookingStatus(String bookingStatus) {
@@ -63,9 +62,9 @@ public class Booking {
     }
     //REMOVED int cap FROM BELOW PARAMETERIZED CONSTRUCTOR
     Booking(String id, String lessonName, String date, String status, String rev, int ratings){
-        this.bookingId = id;
-        this.lessonName = lessonName;
-        this.lessonDate = date;
+        this.hertsBookingId = id;
+        this.exerciseLessonName = lessonName;
+        this.exerciseLessonDate = date;
         this.bookingStatus = status;
         this.review = rev;
         this.rating = ratings;
@@ -76,17 +75,17 @@ public class Booking {
     Scanner scanner = new Scanner(System.in);
 
     public void bookingDetails(){
-            System.out.println("Booking Id:"+bookingId+"    Exercise name: " + lessonName + "    Date: " + lessonDate + "         Booking Status: " + bookingStatus);
+            System.out.println("Booking Id:"+hertsBookingId+"    Exercise name: " + exerciseLessonName + "    Date: " + exerciseLessonDate + "         Booking Status: " + bookingStatus);
     }
-    public void changeBooking(String id){
-    }
-    public void cancelBooking(String id, Booking b) {
-    }
+//    public void changeBooking(String id){
+//    }
+//    public void cancelBooking(String id, Booking b) {
+//    }
 
-    public void attendLesson(String id){
-        if(bookingId.equals(id)){
+    public void attendASession(String id){
+        if(hertsBookingId.equals(id)){
             bookingStatus = "attended";
-            System.out.println("Booking ID:" + bookingId +"   New Booking Status:" + bookingStatus);
+            System.out.println("Booking ID:" + hertsBookingId +"   New Booking Status:" + bookingStatus);
         }
     }
 }

@@ -38,7 +38,7 @@ public class TestExercise {
 	@Test
 	public void testPrice() {
 		int expPrice = 5;
-		int result = demo.getPrice();
+		int result = demo.getCost();
 		assertEquals(expPrice, result);
 	}
 
