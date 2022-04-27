@@ -86,7 +86,7 @@ public class Booking {
     public void attendLesson(String id){
         if(bookingId.equals(id)){
             bookingStatus = "attended";
-            System.out.println("Booking ID:" + bookingId +"   Booking Status:" + bookingStatus);
+            System.out.println("Booking ID:" + bookingId +"   New Booking Status:" + bookingStatus);
         }
     }
 }

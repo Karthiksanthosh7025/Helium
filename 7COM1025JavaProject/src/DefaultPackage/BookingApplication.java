@@ -64,7 +64,7 @@ public class BookingApplication {
         
         bookings.add(new Booking("LM69104","boxing","02-01-2022","attended","Very Satisfied",5));
     	bookings.add(new Booking("LM69105","cricket","02-01-2022","attended","Satisfied",4));
-    	bookings.add(new Booking("LMt69106","football","08-01-2022","attended","Very Satisfied",5));
+    	bookings.add(new Booking("LM69106","football","08-01-2022","attended","Very Satisfied",5));
     	bookings.add(new Booking("LM69107","basketball","09-01-2022","attended","Ok",3));
     	bookings.add(new Booking("LM69108","boxing","09-01-2022","attended","Very Satisfied",5));
     	bookings.add(new Booking("LM69109","swimming","15-01-2022","attended","Dissatisfied",2));
@@ -78,16 +78,12 @@ public class BookingApplication {
         int userOption;
         int userInput;
         Scanner scanner = new Scanner(System.in);
-
-        //PRINT WHOLE DETAILS OF EACH LESSONS
-		/*for(Exercise e:exercises) {
-			e.displayExcersizeDetails();
-		}*/
         
-       while(true){
-           System.out.println("!!!!! Welcome to University Sports Center !!!!! " +
-                   "\nEnter '1' for Booking \nEnter '2' for Change Booking " +
-                   "\nEnter '3' Attend a Lesson \nEnter '4' for Monthly report \nEnter '5' to Exit");
+       int loop001=1;
+       while(loop001==1){
+           System.out.println("!!!!!---------------University Sports Center Booking Portal---------------!!!!! " +
+                   "\n                    +Enter '1' for Booking a session \n                    +Enter '2' for Change or Cancel a Booking " +
+                   "\n                    +Enter '3' Attend a Lesson \n                    +Enter '4' for Monthly report");
            userOption = scanner.nextInt();
            if (userOption == 1) {
                for(Booking b:bookings){
@@ -140,19 +136,18 @@ public class BookingApplication {
            }
            else if (userOption == 2)
            {
-               System.out.println("1. Change Booking\n2. Cancel Booking");
-               System.out.println("Please Enter Your option: ");
+               System.out.println("Please Enter Your choice: \n'1' for Updating a booking\n'2' for cancelling a booking");
                int choice = scanner.nextInt();
                if(choice == 1){
-                   for (Exercise e : exercises) {
-                       e.classDetails();
-                   }
+//                   for (Exercise e : exercises) {
+//                       e.classDetails();
+//                   }
                    System.out.println("Please Enter your Booking ID: ");
                    String userBookingId = scanner.next();
-                   for(Booking b:bookings){
-                       b.bookingDetails();
+                   	for(Booking b:bookings){
+                     b.bookingDetails();
                        if(b.getBookingId().equals(userBookingId)){
-                           System.out.println("Booking Details Found\n");
+                           System.out.println("\nShowing booking details of " +userBookingId + " below\n");
                            System.out.println("Booking ID:" + b.getBookingId() + "\nLesson Name:" + b.getLessonName()
                                    + "\nDate:" + b.getLessonDate() + "\nBooking Status:" + b.getBookingStatus());
                            System.out.println("Are you sure you want to Change the booking (y/n):");
@@ -209,11 +204,9 @@ public class BookingApplication {
                                        e.setCapacity(cap);
                                    }
                                }
-                               System.out.println("Booking Cancelled :" + b);
+                               System.out.println("Booking Cancelled :" + userBookingId);
                                System.out.println("Available Classes are:\n");
-                               for (Exercise e : exercises){
-                                   e.classDetails();
-                               }
+                               
                            }
                        }
                    }
@@ -235,13 +228,13 @@ public class BookingApplication {
                        String confirmation = scanner.next();
                        if (confirmation.equals("y")) {
                            b.attendLesson(userBookingId);
-                           System.out.println("Class Attended\n");
                            System.out.println("Please write a review for the class\n");
-                           String userReview = scanner.nextLine();
+                           String userReview = scanner.next();
                            b.setReview(userReview);
-                           System.out.println("Please give a rating for the Class [1-5] \n");
+                           System.out.println("Please give a rating for the Class out 5 \n");
                            int userRating= scanner.nextInt();
                            b.setRating(userRating);
+                           System.out.println("Thankyou for your valuable feedback!!!");
                        }
 
                    }
@@ -267,17 +260,11 @@ public class BookingApplication {
                           }
                       }
                   }
-                  else {
-                	  System.out.println("Not woring");
-                  }
                }
 
 
            }
-           else if (userOption == 5)
-           {
-               System.exit(0);
-           }
+           
            else {
                System.out.println("Please enter a valid option");
            }
