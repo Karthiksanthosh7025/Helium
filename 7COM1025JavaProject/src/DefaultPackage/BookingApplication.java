@@ -82,7 +82,7 @@ public class BookingApplication {
        while(loop001==1){
            System.out.println("!!!!!---------------University Sports Center Booking Portal---------------!!!!! " +
                    "\n                    +Enter '1' for Booking a session \n                    +Enter '2' for Change or Cancel a Booking " +
-                   "\n                    +Enter '3' Attend a Lesson \n                    +Enter '4' for Monthly report");
+                   "\n                    +Enter '3' Attend a Lesson");
            userOption = scanner.nextInt();
            if (userOption == 1) {
                for(Booking b:bookings){
